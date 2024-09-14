@@ -1,0 +1,43 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Simple Flutter App',
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Simple Flutter App'),
+        ),
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Text(
+                'Welcome to my app!',
+                style: TextStyle(fontSize: 24),
+              ),
+              SizedBox(height: 20),
+              ElevatedButton(
+                onPressed: () {
+                  print('Button pressed!');
+                },
+                child: Text('Press me'),
+              ),
+              SizedBox(height: 20),
+              Image.network(
+                'https://web.facebook.com/photo/?fbid=1047465237378930&set=pb.100063463901889.-2207520000',
+                width: 200,
+                height: 200,
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
